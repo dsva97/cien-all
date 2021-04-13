@@ -1,0 +1,25 @@
+{
+  "name": "amor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "rm": "yarn rimraf dist/bundle",
+    "serve": "node server",
+    "start": "nodemon --watch src -e js,css,html --exec \"yarn rm && yarn build:dev\"",
+    "build:dev": "yarn esbuild src/index.js --loader:.html=text --bundle --outdir=dist/bundle"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "esbuild": "^0.11.10",
+    "express": "^4.17.1",
+    "livereload": "^0.9.3",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@appnest/masonry-layout": "^2.0.8",
+    "@vaadin/router": "^1.7.4",
+    "page": "^1.11.6"
+  }
+}
