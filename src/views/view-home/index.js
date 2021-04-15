@@ -1,3 +1,4 @@
+import "../../components/pe-button";
 import html from "./template.html";
 
 const template = document.createElement("template");

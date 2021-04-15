@@ -6,8 +6,7 @@ template.innerHTML = html;
 class ViewBlog extends HTMLElement {
   constructor() {
     super();
-    this.$root = this.attachShadow({ mode: "open" });
-    this.$root.appendChild(template.content.cloneNode(true));
+    // this.appendChild(document.importNode(template.content.cloneNode(true)));
   }
 }
 

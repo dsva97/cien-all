@@ -5,10 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./global.css" />
+    <meta name="description" content="Hola mundo!!!" />
+    <link rel="preload" as="style" href="./global.css" />
+    <link rel="stylesheet" href="/global.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <section>
+      <button class="fill large">Hola</button>
+      <x-card
+        width="160px"
+        img="/img/card.jpg"
+        title="Hola mundo!"
+        tag="javascript"
+      ></x-card>
+    </section>
+    <script src="./bundle/index.js"></script>
   </body>
-  <script src="./bundle/index.js"></script>
 </html>

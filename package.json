@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "posts": "yarn esbuild posts/index.js",
     "rm": "yarn rimraf dist/bundle",
-    "serve": "node server",
+    "serve": "node simple-server",
     "start": "nodemon --watch src -e js,css,html --exec \"yarn rm && yarn build:dev\"",
-    "build:dev": "yarn esbuild src/index.js --loader:.html=text --bundle --outdir=dist/bundle"
+    "build:dev": "yarn esbuild src/index.js --loader:.html=text --loader:.hash.css=file --bundle --outdir=dist/bundle"
   },
   "devDependencies": {
     "connect-livereload": "^0.6.1",
@@ -20,6 +21,8 @@
   "dependencies": {
     "@appnest/masonry-layout": "^2.0.8",
     "@vaadin/router": "^1.7.4",
-    "page": "^1.11.6"
+    "page": "^1.11.6",
+    "showdown": "^1.9.1",
+    "spdy": "^4.0.2"
   }
 }
